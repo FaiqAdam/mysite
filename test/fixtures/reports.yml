@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reportnumber: MyString
+  reference: MyString
+  species: MyString
+  variety: MyString
+  weight: 1
+  dimension: MyString
+  shapecut: MyString
+  colour: MyString
+  item: MyString
+  transparency: MyString
+  requesof: MyString
+  comments: MyText
+
+two:
+  reportnumber: MyString
+  reference: MyString
+  species: MyString
+  variety: MyString
+  weight: 1
+  dimension: MyString
+  shapecut: MyString
+  colour: MyString
+  item: MyString
+  transparency: MyString
+  requesof: MyString
+  comments: MyText

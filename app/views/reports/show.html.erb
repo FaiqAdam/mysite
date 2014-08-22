@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reportnumber:</strong>
+  <%= @report.reportnumber %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @report.reference %>
+</p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @report.species.capitalize %>
+</p>
+
+<p>
+  <strong>Variety:</strong>
+  <%= @report.variety.capitalize %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @report.weight %>
+</p>
+
+<%= image_tag @report.image.url(:medium) %>
+<p>
+  <strong>Dimension:</strong>
+  <%= @report.dimension %>
+</p>
+
+<p>
+  <strong>Shapecut:</strong>
+  <%= @report.shapecut.capitalize %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @report.colour.capitalize %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @report.item.capitalize %>
+</p>
+
+<p>
+  <strong>Transparency:</strong>
+  <%= @report.transparency.capitalize %>
+</p>
+
+<p>
+  <strong>Requesof:</strong>
+  <%= @report.requesof.capitalize %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @report.comments.capitalize %>
+</p>
+
+<br>
+<p><%= link_to "Printable Receipt (PDF)", report_path(@report, format: "pdf") %></p>
+
+<br>
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>

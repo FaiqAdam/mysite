@@ -1,0 +1,54 @@
+<%= simple_form_for(@report, html: {class: 'form-horizontal', :multipart => true }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :reportnumber %>
+    <%= f.input :reference %>
+
+
+    <%= f.input :species, priority: [ "NATURAL CORUNDUM" ], collection: [ "NATURAL CORUNDUM", "NATURAL  SPINEL", "NATURAL CHRYSOBERYL ", "NATURAL PYROPE-ALMANDINE GARNET","NATURAL GROSSULAR GARNET", "NATURAL TOURMALINE", "NATURAL SPESSARTTE GARNET", "NATURAL ZIRCON", "NATURAL PYROPE-SPESSARTITE GARNET", "NATURAL TOPAZ","NATURAL QUART", "NATURAL BERYL", "NATURAL OTHERS"] %>
+
+
+
+
+<%= f.input :variety, priority: [ "NATURAL BLUE SAPPHIRE" ], collection: ["NATURAL BLUE SAPPHIRE","BLUE SAPPHIRE","NATURAL YELLOW SAPPHIRE","YELLOW SAPPHIRE","NATURAL GREEN SAPPHIRE","GREEN SAPPHIRE","NATURAL BI-COLOUR SAPPHIRE","BI-COLOUR SAPPHIRE","NATURAL ‘PADPARADSCHA'","‘PADPARADSCHA’","NATURAL PINK SAPPHIRE","PINK SAPPHIRE","NATURAL PURPLE SAPPHIRE","PURPLE SAPPHIRE","NATURAL VIOLET SAPPHIRE","VIOLET SAPPHIRE","NATURAL PINK SAPPHIRE","PINK  SAPPHIRE","NATURAL RUBY","RUBY","NATURAL BLUE  STAR SAPPHIRE","NATURAL PINK STAR SAPPHIRE","NATURAL VIOLET STAR SAPPHIRE","NATURAL PURPLE STAR SAPPHIRE","NATURAL STAR SAPPHIRE","NATURAL STAR RUBY","NATURAL ORANGE SAPPHIRE","ORANGE SAPPHIRE","SPINEL","GAHNOSPINEL","COBALT SPINEL","STAR SPINEL","CHRYSOBERYL","CHRYSOBERYL CAT’S EYE","ALEXANDRITE","ALEXANDRITE CAT’S EYE","RHODOLITE","STAR GARNET","TSAVORITE","HESSONITE","TOURMALINE","RUBELLITE","CHROME TOURMLINE","SPESSARTITE","ZIRCON","PYROPE-SPESSARTITE","COLOUR CAHNGE GARNET","TOPAZ","LEMON QUARTZ","SMOKY QUARTZ","STAR QUARTZ","BERYL","Emerald","AQUAMARINE","OTHERS"] %>
+
+
+
+    <%= f.input :weight %>
+    <%= f.input :dimension %>
+
+
+
+
+
+    <%= f.input :shapecut, priority: [ "Oval mixed cut" ], collection: ["Oval mixed cut","Octagon mixed cut","Octagon step cut","Oval cabochon","Cushion rectangular mixed cut","Trilliant mixed cut","Heart mixed cut","Pear mixed cute","Baguette step cut","Others" ]%>
+
+
+
+
+
+
+
+    <%= f.input :colour %>
+    <%= f.input :item, priority: [ "A loose faceted stone" ], collection: [ "A loose faceted stone","A loose faceted stone mounted in a","A loose cabochon stone","A loose cabochon stone mounted in a" ]%>
+
+
+  
+
+
+    <%= f.input :transparency, priority: [ "Transparent" ], collection: ["Transparent","Translucent","Others"]  %>
+
+
+
+
+
+    <%= f.input :requesof %>
+    <%= f.input :comments %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
