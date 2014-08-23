@@ -1,5 +1,17 @@
 class ReportsController < ApplicationController
+
+  before_action :authenticate_user!, except: [:show]
   before_action :set_report, only: [:show, :edit, :update, :destroy]
+
+  before_filter :is_admin?, except: [:show]
+  
+  def is_admin?
+    if current_user.admin?
+      true
+    else
+      redirect_to root_url
+    end
+  end
 
   # GET /reports
   # GET /reports.json

@@ -8,6 +8,34 @@
 </head>
 <body>
 
+     <% if user_signed_in? %>
+      <li><%= link_to current_user.email, edit_user_registration_path %></li>
+      <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+
+      <% else %>
+
+      <li><%= link_to "Sign In", user_session_path %></li>
+      <li><%= link_to "Sign Up", new_user_registration_path %></li>
+    <% end %>
+
+
+<% if user_signed_in? %>
+  <% if current_user.admin? %>
+    <li><a class="alert button expand">This Is Admin Area</a></li>
+    <li><%= link_to 'All Reports', reports_path, class: "active button" %></li>
+    <li><%= link_to 'Add New Neport', new_report_path, class: "alert button" %></li>
+  <% end %>
+<% end %>
+
+
+
+
+
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+       
 <%= yield %>
 
 </body>

@@ -35,6 +35,8 @@ gem 'rqrcode-with-patches', require: 'rqrcode'
 gem 'prawn'
 
 
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
